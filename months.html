@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var  mon = prompt("Enter month 1 to 12");
+        mon = parseInt(mon);
+        if (mon==1 || mon==3 || mon==5 || mon==7 || mon==8 || mon==10 || mon==12  ){
+            document.write("number of days are 31");
+        }else if (mon==4 || mon==6 || mon==9 || mon==11){
+            document.write("number of days are 3o");
+        }
+        else if (mon==2){
+            document.write("number of days are 28 or 29");
+        }
+        else {
+            document.write("invalid");
+        }
+    </script>
+</body>
+</html>

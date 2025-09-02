@@ -40,24 +40,25 @@
             let y = 2; //block scope
             const z = 3; //block scope
             if (true){ //inside the function
-                var x = 10;
-                let y = 20;
-                const z = 30;
+                var x = 10; // reassign value
+                let y = 20; // block scope
+                const z = 30; //block scope
 
-                document.write(x);
-                document.write(y);
-                document.write(z);
+                document.write(x); //10
+                document.write(y); //20
+                document.write(z); //30
                 document.write("<br>");
             }
-                document.write(x);
-                document.write(y);
-                document.write(z);
+            //outside function
+                document.write(x); //10
+                document.write(y); //2
+                document.write(z); //3
                 document.write("<br>");
         }
 
-                document.write(x);
-                document.write(y);
-                document.write(z);
+                document.write(x); //100
+                document.write(y);//101
+                document.write(z);//102
                 document.write("<br>");
 
 scopeexample()
