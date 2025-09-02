@@ -27,5 +27,40 @@
         // pi = 155; re assign is not allowed
         document.write(pi);
     </script>
+
+    <script>
+     //global scope
+        var x = 100;
+        let y = 101;
+        const z = 103;
+
+        function scopeexample(){
+           
+            var x = 1; //function scope
+            let y = 2; //block scope
+            const z = 3; //block scope
+            if (true){ //inside the function
+                var x = 10;
+                let y = 20;
+                const z = 30;
+
+                document.write(x);
+                document.write(y);
+                document.write(z);
+                document.write("<br>");
+            }
+                document.write(x);
+                document.write(y);
+                document.write(z);
+                document.write("<br>");
+        }
+
+                document.write(x);
+                document.write(y);
+                document.write(z);
+                document.write("<br>");
+
+scopeexample()
+    </script>
 </body>
 </html>
