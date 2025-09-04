@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    
+    .calculator {
+      width: 300px;
+      margin: 120px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .calculator:hover {
+      width: 350px;
+      margin: 120px auto;
+      padding: 20px;
+      border: 4px solid green;
+      box-shadow: 5px 5px 10px gray;
+
+    }
+
+    .buttons button {
+      margin: 10px;
+      padding: 10px 15px;
+      color: chartreuse;
+      background: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buttons button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+    <form name="myform">
+  <div class="calculator">
+    <h1>Calculator</h1>
+    <label>Number 1:</label>
+    <input type="number" name="n1" id="num1"><br><br>
+
+    <label>Number 2:</label>
+    <input type="number" name="n2" id="num2"><br><br>
+    <div class="buttons">
+      <button onclick="calculate('+')">+</button>
+      <button onclick="calculate('-')">-</button>
+      <button onclick="calculate('*')">*</button>
+      <button onclick="calculate('/')">/</button>
+    </div>
+    <br>
+    <label>Result:</label>
+    <input type="text" name="res" id="result" disabled>
+  </div>
+  </form>
+  <script>
+    function calculate(operator) {
+      let num1 = parseFloat(document.getElementById('num1').value);
+      let num2 = parseFloat(document.getElementById('num2').value);
+      let result;
+
+      if (isNaN(num1) || isNaN(num2)) {
+        result = 'Invalid input';
+      } else {
+        switch (operator) {
+          case '+':
+            result = num1 + num2;
+            break;
+          case '-':
+            result = num1 - num2;
+            break;
+          case '*':
+            result = num1 * num2;
+            break;
+          case '/':
+            result = num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
+            break;
+          default:
+            result = 'Error';
+        }
+      }
+      document.getElementById('result').value = result;
+    }
+  </script>
+</body>
+</html>

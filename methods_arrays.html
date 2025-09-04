@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = ["Shubham","pratik","madhav","atharv","vedant"];
+        document.write(a + "<br>");
+
+        a[4]= "shyam";
+        document.write(a + "<br>");
+
+        delete a[3];
+        document.write(a + "<br>");
+    </script>
+
+    <script> //sort and reverse
+        var a = ["Minal","Gauri","Chitresh","Vikrant","Harshal","Krushna","Shubham"];
+        document.write(a + "<br>");
+
+        a.sort();
+        document.write(a + "<br>");
+
+        a.reverse();
+        document.write(a + "<br>");
+
+    </script>
+
+    <script> //push pop (last elements)
+        var a = ["Minal","Gauri","Chitresh","Vikrant","Harshal","Krushna"];
+        document.write(a + "<br>");
+
+        a.pop();
+        a.pop();
+        document.write(a + "<br>");
+
+        a.push("Shubham");
+        a.push("Shyam");
+        a.push("Pratik");
+        document.write(a + "<br>");
+    </script>
+
+    <script> //shift and unshift (first element)
+        var a=["Minal","Gauri","Chitresh","Vikrant","Harshal","Krushna"];
+        document.write(a + "<br>");
+
+        a.shift();
+        a.shift();
+        document.write(a + "<br>");
+
+        a.unshift("Prathmesh");
+        a.unshift("abhijeet");
+        document.write(a + "<br>");
+    </script>
+
+
+    <script> //concat and join
+        document.write(15 + "<br>");
+        var a =["Minal","Gauri","Chitresh"];
+        var b = ["Vikrant","Harshal","Krushna"];
+        var z= ["Deepak","Aniket","krushna"];
+
+        var c= a.concat(b,z);
+        document.write(c + "<br>");
+        var d=c.join("/");
+        document.write(d + "<br>");
+    </script>
+</body>
+</html>
